@@ -17,8 +17,24 @@ public class User {
         this.email = email;
     }
 
+    public String getEmail() {
+        return email;
+    }
 
-    public String getEmail() { return email; }
-    public void setEmail(String email) { this.email = email; }
-    public void updateEmail(String newEmail) { this.email = newEmail; }
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public void updateEmail(String newEmail) {
+        this.email = newEmail;
+    }
+
+    public static void main(String[] args) {
+       User user = new User("001", "user@example.com");
+        System.out.println("Current Email: " + user.getEmail());
+
+        // Cập nhật email
+        user.updateEmail("newuser@example.com");
+        System.out.println("Updated Email: " + user.getEmail());
+    }
 }
